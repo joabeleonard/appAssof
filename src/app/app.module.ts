@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import 'rxjs/add/operator/do';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,10 +27,16 @@ import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamen
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    AcompanhamentoJuridicoPage,
+    PerfilUsuarioPage,
+    InformacoesGeraisPage,
+    LoginPage,
+    EstatutoPage,
+    BeneficiosPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

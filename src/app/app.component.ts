@@ -6,6 +6,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { AcompanhamentoJuridicoPage } from '../pages/acompanhamento-juridico/acompanhamento-juridico';
+import { BeneficiosPage } from '../pages/beneficios/beneficios';
+import { EstatutoPage } from '../pages/estatuto/estatuto';
+import { InformacoesGeraisPage } from '../pages/informacoes-gerais/informacoes-gerais';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,10 +27,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Perfil', component: HomePage },
-      { title: 'Acompanhamento Juridico', component: ListPage },
-      { title: 'Beneficios', component: ListPage },
-      { title: 'Estatuto', component: ListPage },
-      { title: 'Informações Gerais', component: ListPage }
+      { title: 'Acompanhamento Juridico', component: AcompanhamentoJuridicoPage },
+      { title: 'Beneficios', component: BeneficiosPage },
+      { title: 'Estatuto', component: EstatutoPage },
+      { title: 'Informações Gerais', component: InformacoesGeraisPage }
 
 
 
