@@ -13,7 +13,11 @@ export class UsuariosServiceProvider {
 
 
   efetuaLogin(cpf, senha) {
-    return this._http.post<Usuario>('http://localhost:3000/usuarios/logar', {cpf:cpf, senha:senha})
+  
+    
+    var usuario = {"cpf":cpf, "senha":senha};
+    console.log(usuario)
+    return this._http.post<Usuario>('http://localhost:3000/usuarios/logar',usuario )
               .do((usuario: Usuario) => this._usuarioLogado = usuario);
   }
 
