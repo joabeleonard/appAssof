@@ -22,6 +22,7 @@ import { BeneficiosPage } from '../pages/beneficios/beneficios';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 import { NoticiasServiceProvider } from '../providers/noticias-service/noticias-service';
 import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamento-juridico-service/acompanhamento-juridico-service';
+import { ApiServiceProvider } from '../providers/api-service';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamen
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UsuariosServiceProvider,
     NoticiasServiceProvider,
+    ApiServiceProvider,
     AcompanhamentoJuridicoServiceProvider,
     Camera
   ]
