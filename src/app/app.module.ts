@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import 'rxjs/add/operator/do';
 import { HttpClientModule } from '@angular/common/http';
 
+import { Camera } from '@ionic-native/camera';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -57,7 +58,8 @@ import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamen
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UsuariosServiceProvider,
     NoticiasServiceProvider,
-    AcompanhamentoJuridicoServiceProvider
+    AcompanhamentoJuridicoServiceProvider,
+    Camera
   ]
 })
 export class AppModule {}

@@ -10,6 +10,7 @@ import { AcompanhamentoJuridicoPage } from '../pages/acompanhamento-juridico/aco
 import { BeneficiosPage } from '../pages/beneficios/beneficios';
 import { EstatutoPage } from '../pages/estatuto/estatuto';
 import { InformacoesGeraisPage } from '../pages/informacoes-gerais/informacoes-gerais';
+import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,7 +22,9 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    private _usuarioService: UsuariosServiceProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -31,8 +34,6 @@ export class MyApp {
       { title: 'Beneficios', component: BeneficiosPage },
       { title: 'Estatuto', component: EstatutoPage },
       { title: 'Informações Gerais', component: InformacoesGeraisPage }
-
-
 
     ];
 
@@ -51,5 +52,14 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  get avatar(){
+    return this._usuarioService.obtemAvatar();
+  }
+
+  get usuarioLogado(){
+    console.log(this._usuarioService.usuarioLogado);
+     return this._usuarioService.usuarioLogado(); 
   }
 }
