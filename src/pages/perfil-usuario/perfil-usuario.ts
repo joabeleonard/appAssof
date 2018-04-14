@@ -44,6 +44,6 @@ export class PerfilUsuarioPage {
   }
 
   get usuarioLogado() {
-    return this._usuariosService.usuarioLogado();
+    return this._usuariosService.obtemUsuarioLogado();
   }
 }

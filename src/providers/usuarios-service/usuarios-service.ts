@@ -14,7 +14,7 @@ export class UsuariosServiceProvider {
   constructor(public _http: HttpClient,
     private _api: ApiServiceProvider) {
     this._url = this._api.url;
-    console.log('Hello UsuariosServiceProvider Provider');
+    console.log('Hello UsuariosServiceProvider Provider'+ this._url);
   }
 
 
@@ -27,10 +27,9 @@ export class UsuariosServiceProvider {
               .do((usuario: Usuario) => this._usuarioLogado = usuario);
   }
 
-  public usuarioLogado(){
+  obtemUsuarioLogado() {
     return this._usuarioLogado;
   }
-
   salvaAvatar(avatar) {
     localStorage.setItem(CHAVE, avatar);
   }

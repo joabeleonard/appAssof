@@ -11,8 +11,10 @@ import { BeneficiosPage } from '../pages/beneficios/beneficios';
 import { EstatutoPage } from '../pages/estatuto/estatuto';
 import { InformacoesGeraisPage } from '../pages/informacoes-gerais/informacoes-gerais';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
+import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
 
 @Component({
+  selector: 'myapp',
   templateUrl: 'app.html'
 })
 export class MyApp {
@@ -29,7 +31,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Perfil', component: HomePage },
+      { title: 'Perfil', component: PerfilUsuarioPage },
       { title: 'Acompanhamento Juridico', component: AcompanhamentoJuridicoPage },
       { title: 'Beneficios', component: BeneficiosPage },
       { title: 'Estatuto', component: EstatutoPage },
@@ -59,7 +61,8 @@ export class MyApp {
   }
 
   get usuarioLogado(){
-    console.log(this._usuarioService.usuarioLogado);
-     return this._usuarioService.usuarioLogado(); 
+    console.log(this._usuarioService.obtemUsuarioLogado());
+     return this._usuarioService.obtemUsuarioLogado(); 
   }
+
 }

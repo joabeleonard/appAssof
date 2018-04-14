@@ -9,5 +9,8 @@ import { PerfilUsuarioPage } from './perfil-usuario';
   imports: [
     IonicPageModule.forChild(PerfilUsuarioPage),
   ],
+  exports:[
+    PerfilUsuarioPage
+  ]
 })
 export class PerfilUsuarioPageModule {}
