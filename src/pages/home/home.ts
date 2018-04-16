@@ -5,6 +5,7 @@ import { LoadingController } from 'ionic-angular/components/loading/loading-cont
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { NoticiasServiceProvider } from '../../providers/noticias-service/noticias-service';
 import { HttpErrorResponse } from '@angular/common/http/src/response';
+import { EscolhaPage } from '../escolha/escolha';
 
 @Component({
   selector: 'page-home',
@@ -48,9 +49,14 @@ export class HomePage {
               );
   }
 
-  selecionaCarro(noticia: Noticia) {
+  selecionaNotica(noticia: Noticia) {
     console.log(noticia);
-   
+    this.navCtrl.push(EscolhaPage.name, {
+      noticiaSelecionada: noticia
+    });
   }
 
+  get caminhoImagem(){
+    return this._noticiasService.caminhoImagem();
+  }
 }

@@ -23,6 +23,7 @@ import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-
 import { NoticiasServiceProvider } from '../providers/noticias-service/noticias-service';
 import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamento-juridico-service/acompanhamento-juridico-service';
 import { ApiServiceProvider } from '../providers/api-service';
+import { ModalAcompanhamentoPage } from '../pages/modal-acompanhamento/modal-acompanhamento';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ApiServiceProvider } from '../providers/api-service';
     InformacoesGeraisPage,
     LoginPage,
     EstatutoPage,
-    BeneficiosPage
+    BeneficiosPage,
+    ModalAcompanhamentoPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { ApiServiceProvider } from '../providers/api-service';
     PerfilUsuarioPage,
     InformacoesGeraisPage,
     EstatutoPage,
-    BeneficiosPage
+    BeneficiosPage,
+    ModalAcompanhamentoPage
   ],
   providers: [
     StatusBar,

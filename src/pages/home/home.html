@@ -12,14 +12,14 @@
 <ion-content padding>
   <ion-list>
 
-    <ion-card *ngFor="let noticia of noticias">
+    <ion-card *ngFor="let noticia of noticias"  (click)="selecionaNotica(noticia)">
  
       <ion-item>
       
-        <p>{{noticia.data}}</p>
+        <p>Data da postagem: {{noticia.data | date:"dd/MM/yy"}}</p>
       </ion-item>
  
-      <img src="http://placehold.it/500x200" />
+      <img [src]="caminhoImagem + noticia.image" />
  
       <ion-card-content>
         {{noticia.titulo}}

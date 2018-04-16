@@ -23,4 +23,8 @@ export class NoticiasServiceProvider {
   lista() {
     return this._http.get<Noticia[]>(this._url+'/noticias');
   }
+
+  caminhoImagem(){
+    return this._url+'/';
+  }
 }
