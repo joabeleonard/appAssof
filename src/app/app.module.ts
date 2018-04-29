@@ -24,6 +24,8 @@ import { NoticiasServiceProvider } from '../providers/noticias-service/noticias-
 import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamento-juridico-service/acompanhamento-juridico-service';
 import { ApiServiceProvider } from '../providers/api-service';
 import { ModalAcompanhamentoPage } from '../pages/modal-acompanhamento/modal-acompanhamento';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { ModalAcompanhamentoPage } from '../pages/modal-acompanhamento/modal-aco
   imports: [
     BrowserModule,
     HttpClientModule,
+    PdfViewerModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
