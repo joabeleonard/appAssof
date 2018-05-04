@@ -25,6 +25,9 @@ import { AcompanhamentoJuridicoServiceProvider } from '../providers/acompanhamen
 import { ApiServiceProvider } from '../providers/api-service';
 import { ModalAcompanhamentoPage } from '../pages/modal-acompanhamento/modal-acompanhamento';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+
 
 
 @NgModule({
@@ -67,7 +70,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     NoticiasServiceProvider,
     ApiServiceProvider,
     AcompanhamentoJuridicoServiceProvider,
-    Camera
+    Camera,
+    FileTransfer, FileTransferObject,File
   ]
 })
 export class AppModule {}

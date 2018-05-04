@@ -34,6 +34,9 @@
       <ion-icon name="at" item-left></ion-icon>
       <p>{{ usuarioLogado.email }}</p>
     </ion-item>
+    <form (ngSubmit)="downloadRequerimento()">
+        <button ion-button block type="submit" class="login">REQUERIMENTO DE ADESÃO</button>
+    </form>
 
   </ion-card>
 
